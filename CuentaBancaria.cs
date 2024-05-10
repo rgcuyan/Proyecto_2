@@ -1,4 +1,4 @@
-class CuentaBancaria
+public class CuentaBancaria
 {
     int idCueta { get; set; }
     string tipoCuenta { get; set; }
@@ -7,6 +7,8 @@ class CuentaBancaria
     string direccion { get; set; }
     int telefono { get; set; }
     decimal saldo { get; set; }
+
+    public CuentaBancaria() { }
 
     public CuentaBancaria(int idCueta, string tipoCuenta, string nombre, int dpi, string direccion, int telefono, decimal saldo)
     {
