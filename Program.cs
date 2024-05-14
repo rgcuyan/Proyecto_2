@@ -44,33 +44,69 @@ namespace Proyecto_2
 
         public static void IngresoDatos()
         {
-            Console.WriteLine("\n----------------------------");
+            Console.WriteLine("\n---------------------------------------------");
             System.Console.WriteLine("Porfavor introduzca la siguiente informacion.");
-            System.Console.WriteLine("Ingrese su nombre completo");
+
+            System.Console.WriteLine("\nIngrese su nombre completo");
             string nombre = Console.ReadLine();
 
-            string cuenta = "";
-            bool validacion = false;
-
-            do
+            string tipoCuenta = "";
+            for (string i = "0"; i == "0";)
             {
-                System.Console.WriteLine("Ingrese su tipo de cuenta:\na. Ahorro\nb. Monetaria");
+                System.Console.WriteLine("\nIngrese su tipo de cuenta:\na. Ahorro\nb. Monetaria");
                 string opcion = Console.ReadLine();
+                tipoCuenta = tipoCuentaValidation(opcion);
+                i = tipoCuenta;
+            }
 
-                if(opcion == "a"){
-                    cuenta = "Ahorro";
-                }else if (opcion == "b")
+            string dpi = "";
+            for (int i = 1; i == 1;)
+            {
+                System.Console.WriteLine("\nIngrese su DPI");
+                dpi = Console.ReadLine();
+                if (dpi.Length == 13)
                 {
-                    cuenta = "Monetaria";
-                } else
-                {
-                    System.Console.WriteLine("Opcion Inalida!. Porfavor intentelo de nuevo");
-                    validacion = true;
+                    i = 0;
                 }
-            } while (validacion);
+                else
+                {
+                    System.Console.WriteLine("\nDPI invalido, intentelo de nuevo!");
+                    i = 1;
+                }
+            }
 
-            System.Console.WriteLine("Ingrese su ");
-            //CuentaBancaria cuenta = new CuentaBancaria(1, nombre);
+            System.Console.WriteLine("\nIngrese su direccion");
+            string direccion = Console.ReadLine();
+
+            System.Console.WriteLine("\nIngrese su numero de telefono");
+            int telefono = Int32.Parse(Console.ReadLine());
+
+
+            CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);   
+        
+            
         }
+
+
+        public static string tipoCuentaValidation(string opcion)
+        {
+            string cuenta = "";
+
+            if (opcion == "a")
+            {
+                cuenta = "Ahorro";
+            }
+            else if (opcion == "b")
+            {
+                cuenta = "Monetaria";
+            }
+            else
+            {
+                System.Console.WriteLine("Opcion Inalida!. Porfavor intentelo de nuevo");
+                cuenta = "0";
+            }
+            return cuenta;
+        }
+
     }
 }

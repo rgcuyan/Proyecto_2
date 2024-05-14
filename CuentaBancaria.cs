@@ -3,17 +3,27 @@ public class CuentaBancaria
     int idCueta { get; set; }
     string tipoCuenta { get; set; }
     string nombre { get; set; }
-    int dpi { get; set; }
+    string dpi { get; set; }
     string direccion { get; set; }
     int telefono { get; set; }
     decimal saldo { get; set; }
 
     public CuentaBancaria() { }
 
-    public CuentaBancaria(int idCueta, string tipoCuenta, string nombre, int dpi, string direccion, int telefono, decimal saldo)
+    public CuentaBancaria(int idCueta, string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
     {
         this.idCueta = idCueta;
         this.tipoCuenta = tipoCuenta;
+        this.nombre = nombre;
+        this.dpi = dpi;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.saldo = saldo;
+    }
+
+    public CuentaBancaria(int idCueta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
+    {
+        this.idCueta = idCueta;
         this.nombre = nombre;
         this.dpi = dpi;
         this.direccion = direccion;
