@@ -83,8 +83,8 @@ namespace Proyecto_2
 
 
             CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);   
-        
-            
+
+            cuenta.showCuentaBancaria();
         }
 
 
