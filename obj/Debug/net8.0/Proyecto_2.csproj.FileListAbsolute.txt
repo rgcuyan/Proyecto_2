@@ -28,3 +28,18 @@ C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra
 C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyectos\Proyecto_2\obj\Debug\net8.0\Proyecto_2.genruntimeconfig.cache
 C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyectos\Proyecto_2\obj\Debug\net8.0\ref\Proyecto_2.dll
 C:\Users\Gabriel\Documents\C#\Proyecto lab\Proyecto_2\obj\Debug\net8.0\Proyecto_2.sourcelink.json
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\bin\Debug\net8.0\Proyecto_2.exe
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\bin\Debug\net8.0\Proyecto_2.deps.json
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\bin\Debug\net8.0\Proyecto_2.runtimeconfig.json
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\bin\Debug\net8.0\Proyecto_2.dll
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\bin\Debug\net8.0\Proyecto_2.pdb
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.AssemblyInfoInputs.cache
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.AssemblyInfo.cs
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.csproj.CoreCompileInputs.cache
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.sourcelink.json
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.dll
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\refint\Proyecto_2.dll
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.pdb
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\Proyecto_2.genruntimeconfig.cache
+C:\Users\ruddy\Documents\Universidad\Semestre 1\Pensamiento Computacional\Progra c#\Proyecto_2\obj\Debug\net8.0\ref\Proyecto_2.dll
