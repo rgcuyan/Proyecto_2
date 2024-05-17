@@ -9,7 +9,21 @@ namespace Proyecto_2
 
         public static void Main(string[] args)
         {
-            Login();
+            //Login();
+            menu();
+        }
+
+        public static void menu()
+        {
+            System.Console.WriteLine("\n----------------MENU-----------------");
+            System.Console.WriteLine("\na. Ver información de la cuenta\nb. Compra de producto financiero\nc. Venta de producto financiero\nd. Abonar a cuenta\ne. Simular paso del tiempo\ne. ");
+            string opcion = Console.ReadLine();
+            System.Console.WriteLine(opcion);
+            switch (switch_on)
+            {
+                
+                default:
+            }
         }
 
         public static void Login()
@@ -82,9 +96,7 @@ namespace Proyecto_2
             int telefono = Int32.Parse(Console.ReadLine());
 
 
-            CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);   
-
-            cuenta.showCuentaBancaria();
+            CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
         }
 
 
