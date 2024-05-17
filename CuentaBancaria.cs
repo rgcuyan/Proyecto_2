@@ -23,9 +23,10 @@ namespace Proyecto_2
             this.saldo = saldo;
         }
 
-        public CuentaBancaria(int idCueta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
+        public void IngresoDatos(int idCueta, string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
         {
             this.idCueta = idCueta;
+            this.tipoCuenta = tipoCuenta;
             this.nombre = nombre;
             this.dpi = dpi;
             this.direccion = direccion;
@@ -35,7 +36,7 @@ namespace Proyecto_2
 
         public void ShowCuentaBancaria()
         {
-            System.Console.WriteLine($"Id: {this.idCueta}\nTipo de Cuenta: {this.tipoCuenta}\nNombre: {this.nombre}\nDPI: {this.dpi}\nDireccion: {this.direccion}\nTelefono: {this.telefono}\n Saldo: {this.saldo}");
+            System.Console.WriteLine($"Id: {this.idCueta}\nTipo de Cuenta: {this.tipoCuenta}\nNombre: {this.nombre}\nDPI: {this.dpi}\nDireccion: {this.direccion}\nTelefono: {this.telefono}\nSaldo: {this.saldo}");
         }
     }
 }

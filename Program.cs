@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using Proyecto_2;
 class Program
 {
-
+    static CuentaBancaria cuenta = new CuentaBancaria();
     public static void Main(string[] args)
     {
         Login();
@@ -11,20 +12,45 @@ class Program
 
     public static void menu()
     {
-        System.Console.WriteLine("\n----------------MENU-----------------");
-        System.Console.WriteLine("\na. Ver información de la cuenta\nb. Compra de producto financiero\nc. Venta de producto financiero\nd. Abonar a cuenta\ne. Simular paso del tiempo\ne. ");
-        string opcion = Console.ReadLine();
-        System.Console.WriteLine(opcion);
+        bool validacion = true;
 
-        switch (opcion)
+        do
         {
+            System.Console.WriteLine("\n----------------MENU-----------------");
+            System.Console.WriteLine("1. Ver información de la cuenta\n2. Compra de producto financiero\n3. Venta de producto financiero\n4. Abonar a cuenta\n5. Simular paso del tiempo\n6. Transferencia\n7. Pago de Servicios\n8. Informe de transacciones\n9. Salir");
+            string opcion = Console.ReadLine();
+            System.Console.WriteLine(opcion);
 
-            default:
-                {
-                    Console.WriteLine("Opcion invalida porfavor intentelo de nuevo");
-                    break;
-                }
-        }
+            switch (opcion)
+            {
+                case "1":
+                    {
+                        cuenta.ShowCuentaBancaria();
+                        break;
+                    }
+                case "2":
+                    {
+
+                        break;
+                    }
+                case "3":
+                    {
+
+                        break;
+                    }
+                case "9":
+                    {
+                        System.Console.WriteLine("Que tenga un lindo dia!");
+                        validacion = false;
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Opcion invalida porfavor intentelo de nuevo");
+                        break;
+                    }
+            }
+        } while (validacion);
     }
 
     public static void Login()
@@ -97,8 +123,7 @@ class Program
         int telefono = Int32.Parse(Console.ReadLine());
 
 
-        CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
-
+        cuenta.IngresoDatos(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
     }
 
 
