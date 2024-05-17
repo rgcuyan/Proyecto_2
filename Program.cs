@@ -123,7 +123,7 @@ class Program
         int telefono = Int32.Parse(Console.ReadLine());
 
 
-        cuenta.IngresoDatos(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
+        cuenta.IngresoDatos(tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
     }
 
 

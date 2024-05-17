@@ -10,6 +10,9 @@ namespace Proyecto_2
         int telefono { get; set; }
         decimal saldo { get; set; }
 
+        string[,] cuentas = new string[10, 7];
+        int i = 0;
+
         public CuentaBancaria() { }
 
         public CuentaBancaria(int idCueta, string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
@@ -23,15 +26,17 @@ namespace Proyecto_2
             this.saldo = saldo;
         }
 
-        public void IngresoDatos(int idCueta, string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
+        public void IngresoDatos(string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
         {
-            this.idCueta = idCueta;
-            this.tipoCuenta = tipoCuenta;
-            this.nombre = nombre;
-            this.dpi = dpi;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.saldo = saldo;
+            cuentas[i, 0] = i.ToString();
+            cuentas[i, 1] = tipoCuenta;
+            cuentas[i, 2] = nombre;
+            cuentas[i, 3] = dpi;
+            cuentas[i, 4] = direccion;
+            cuentas[i, 5] = telefono.ToString();
+            cuentas[i, 6] = saldo.ToString();
+
+            i++;
         }
 
         public void ShowCuentaBancaria()
