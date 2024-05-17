@@ -1,11 +1,6 @@
 ﻿using System;
-
-namespace Proyecto_2
-{
     class Program
     {
-
-
 
         public static void Main(string[] args)
         {
@@ -96,7 +91,14 @@ namespace Proyecto_2
             int telefono = Int32.Parse(Console.ReadLine());
 
 
+<<<<<<< HEAD
             CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);
+=======
+            CuentaBancaria cuenta = new CuentaBancaria(1, tipoCuenta, nombre, dpi, direccion, telefono, 2500.00m);   
+
+            cuenta.showCuentaBancaria();
+
+>>>>>>> 9b3705efd6d3c6cf115c036bb4dbdca026159f3d
         }
 
 
@@ -121,4 +123,3 @@ namespace Proyecto_2
         }
 
     }
-}

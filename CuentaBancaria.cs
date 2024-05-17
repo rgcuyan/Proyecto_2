@@ -1,4 +1,6 @@
-public class CuentaBancaria
+namespace Proyecto_2;
+
+class CuentaBancaria
 {
     int idCueta { get; set; }
     string tipoCuenta { get; set; }
@@ -31,7 +33,7 @@ public class CuentaBancaria
         this.saldo = saldo;
     }
 
-    public void showCuentaBancaria()
+    public void ShowCuentaBancaria()
     {
         System.Console.WriteLine($"Id: {this.idCueta}\nTipo de Cuenta: {this.tipoCuenta}\nNombre: {this.nombre}\nDPI: {this.dpi}\nDireccion: {this.direccion}\nTelefono: {this.telefono}\n Saldo: {this.saldo}");
     }
