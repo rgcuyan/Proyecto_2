@@ -19,7 +19,6 @@ class Program
             System.Console.WriteLine("\n----------------MENU-----------------");
             System.Console.WriteLine("1. Ver información de la cuenta\n2. Compra de producto financiero\n3. Venta de producto financiero\n4. Abonar a cuenta\n5. Simular paso del tiempo\n6. Transferencia\n7. Pago de Servicios\n8. Informe de transacciones\n9. Salir");
             string opcion = Console.ReadLine();
-            System.Console.WriteLine(opcion);
 
             switch (opcion)
             {
@@ -30,7 +29,7 @@ class Program
                     }
                 case "2":
                     {
-
+                        ProductoFinanciero();
                         break;
                     }
                 case "3":
@@ -52,6 +51,27 @@ class Program
             }
         } while (validacion);
     }
+
+    public static void ProductoFinanciero()
+    {
+        Console.WriteLine("\n-----------------------------------------");
+        Console.WriteLine("Usted realizo una compra de un producto financiero!");
+
+        decimal saldoActual = cuenta.ObtenerSaldo(0);
+
+        decimal nuevoSaldo =  saldoActual - (saldoActual * 0.10m);
+
+
+        // Actualizar el saldo en la cuenta
+        cuenta.ActualizarSaldo(0, nuevoSaldo.ToString("N2"));
+
+        // Mostrar el saldo actualizado
+        Console.WriteLine($"El nuevo saldo es: {nuevoSaldo}");
+
+        Console.ReadKey();
+    }
+
+
 
     public static void Login()
     {
@@ -105,7 +125,7 @@ class Program
         {
             System.Console.WriteLine("\nIngrese su DPI");
             dpi = Console.ReadLine();
-            if (dpi.Length == 13)
+            if (dpi.Length == 5)
             {
                 i = 0;
             }
