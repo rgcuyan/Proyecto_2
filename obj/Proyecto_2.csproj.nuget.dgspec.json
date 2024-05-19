@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel\\Documents\\C#\\Proyecto lab\\Proyecto_2\\Proyecto_2.csproj": {}
+    "C:\\Users\\ruddy\\Documents\\Universidad\\Semestre 1\\Pensamiento Computacional\\Progra c#\\Proyecto_2\\Proyecto_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel\\Documents\\C#\\Proyecto lab\\Proyecto_2\\Proyecto_2.csproj": {
+    "C:\\Users\\ruddy\\Documents\\Universidad\\Semestre 1\\Pensamiento Computacional\\Progra c#\\Proyecto_2\\Proyecto_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\C#\\Proyecto lab\\Proyecto_2\\Proyecto_2.csproj",
+        "projectUniqueName": "C:\\Users\\ruddy\\Documents\\Universidad\\Semestre 1\\Pensamiento Computacional\\Progra c#\\Proyecto_2\\Proyecto_2.csproj",
         "projectName": "Proyecto_2",
-        "projectPath": "C:\\Users\\Gabriel\\Documents\\C#\\Proyecto lab\\Proyecto_2\\Proyecto_2.csproj",
-        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Documents\\C#\\Proyecto lab\\Proyecto_2\\obj\\",
+        "projectPath": "C:\\Users\\ruddy\\Documents\\Universidad\\Semestre 1\\Pensamiento Computacional\\Progra c#\\Proyecto_2\\Proyecto_2.csproj",
+        "packagesPath": "C:\\Users\\ruddy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruddy\\Documents\\Universidad\\Semestre 1\\Pensamiento Computacional\\Progra c#\\Proyecto_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ruddy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
