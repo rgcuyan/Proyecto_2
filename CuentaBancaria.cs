@@ -3,27 +3,17 @@ namespace Proyecto_2
     public class CuentaBancaria
     {
         int idCueta { get; set; }
-        string tipoCuenta { get; set; }
-        string nombre { get; set; }
-        string dpi { get; set; }
-        string direccion { get; set; }
+        string tipoCuenta { get; set; } = "";
+        string nombre { get; set; } = "";
+        string dpi { get; set; } = "";
+        string direccion { get; set; } = "";
         int telefono { get; set; }
         decimal saldo { get; set; }
 
         int i = 0;
-        List<string[]> cuentas = new List<string[]>();
-        public CuentaBancaria() { }
+        static List<string[]> cuentas = new List<string[]>();
 
-        public CuentaBancaria(int idCueta, string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
-        {
-            this.idCueta = idCueta;
-            this.tipoCuenta = tipoCuenta;
-            this.nombre = nombre;
-            this.dpi = dpi;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.saldo = saldo;
-        }
+        public CuentaBancaria() { }
 
         public void IngresoDatos(string tipoCuenta, string nombre, string dpi, string direccion, int telefono, decimal saldo)
         {
@@ -33,28 +23,72 @@ namespace Proyecto_2
 
         public void ShowCuentaBancaria()
         {
+            System.Console.WriteLine($"\n*---------------INFORMACION DE CUENTAS--------------*");
+            int contador = 1;
             foreach (var cuenta in cuentas)
             {
-                Console.WriteLine($"ID Cuenta: {cuenta[0]}");
-                Console.WriteLine($"Nombre: {cuenta[2]}");
-                Console.WriteLine($"Tipo de la cuenta: {cuenta[1]}");
-                Console.WriteLine($"DPI: {cuenta[3]}");
-                Console.WriteLine($"Direccion: {cuenta[4]}");
-                Console.WriteLine($"Telefono: {cuenta[5]}");
-                Console.WriteLine($"Saldo: {cuenta[6]}");
+                System.Console.WriteLine($"\nCUENTA {contador}");
+                Console.WriteLine($"{"ID Cuenta:",-20} {cuenta[0]}");
+                Console.WriteLine($"{"Nombre:",-20} {cuenta[2]}");
+                Console.WriteLine($"{"Tipo de la cuenta:",-20} {cuenta[1]}");
+                Console.WriteLine($"{"DPI:",-20} {cuenta[3]}");
+                Console.WriteLine($"{"Dirección:",-20} {cuenta[4]}");
+                Console.WriteLine($"{"Teléfono:",-20} {cuenta[5]}");
+                Console.WriteLine($"{"Saldo:",-20} Q{cuenta[6]}");
+                contador++;
             }
         }
 
-        public string BuscarCuenta(string id)
+        public int BuscarCuenta(int id)
         {
             foreach (var cuenta in cuentas)
             {
-                if (cuenta[0] == id)
+                if (cuenta[0] == id.ToString())
                 {
-                    return $"ID Cuenta: {cuenta[0]}\nNombre: {cuenta[2]}\nTipo de la cuenta: {cuenta[1]}\nDPI: {cuenta[3]}\nDireccion: {cuenta[4]}\nTelefono: {cuenta[5]}\nSaldo: {cuenta[6]}";
+                    return 1;
                 }
             }
-            return "Cuenta no encontrada";
+            return 0;
+        }
+
+        public void EditarCuenta(int id, string nombre, string dpi, string direccion, int telefono)
+        {
+            var cuenta = cuentas[id];
+
+            // Actualizar los valores de la cuenta
+            cuenta[2] = nombre;
+            cuenta[3] = dpi;
+            cuenta[4] = direccion;
+            cuenta[5] = telefono.ToString();
+
+            Console.WriteLine($"Cuenta numero {id + 1} actualizada:");
+            Console.WriteLine($"Tipo de la cuenta: {cuenta[1]}");
+            Console.WriteLine($"Nombre: {cuenta[2]}");
+            Console.WriteLine($"DPI: {cuenta[3]}");
+            Console.WriteLine($"Dirección: {cuenta[4]}");
+            Console.WriteLine($"Teléfono: {cuenta[5]}");
+        }
+
+        public void EliminarCuenta(int id)
+        {
+            if (id >= 0 && id < cuentas.Count)
+            {
+                cuentas.RemoveAt(id);
+
+                // Reasignar IDs para mantener secuencia sin saltos
+                for (int j = 0; j < cuentas.Count; j++)
+                {
+                    cuentas[j][0] = j.ToString();
+                }
+
+                i = cuentas.Count; // Ajustar el valor de 'i' para reflejar el número actual de cuentas
+
+                Console.WriteLine($"Cuenta en índice {id + 1} eliminada exitosamente.");
+            }
+            else
+            {
+                Console.WriteLine("Índice fuera de rango");
+            }
         }
 
         public decimal ObtenerSaldo(int indice)

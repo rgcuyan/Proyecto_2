@@ -4,7 +4,7 @@ namespace Proyecto_2
     {
         public DateTime fecha { get; set; }
         public decimal monto { get; set; }
-        public string tipoOperacion { get; set; } // "Débito" o "Crédito"
+        public string ?tipoOperacion { get; set; } // "Débito" o "Crédito"
 
         int i = 0;
         List<string[]> transacciones = new List<string[]>();
