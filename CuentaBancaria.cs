@@ -61,7 +61,7 @@ namespace Proyecto_2
             cuenta[4] = direccion;
             cuenta[5] = telefono.ToString();
 
-            Console.WriteLine($"Cuenta numero {id + 1} actualizada:");
+            Console.WriteLine($"\nCUENTA CON ID {id} ACTUALIZADA:");
             Console.WriteLine($"Tipo de la cuenta: {cuenta[1]}");
             Console.WriteLine($"Nombre: {cuenta[2]}");
             Console.WriteLine($"DPI: {cuenta[3]}");
@@ -83,23 +83,25 @@ namespace Proyecto_2
 
                 i = cuentas.Count; // Ajustar el valor de 'i' para reflejar el número actual de cuentas
 
-                Console.WriteLine($"Cuenta en índice {id + 1} eliminada exitosamente.");
+                Console.WriteLine($"CUENTA CON ID {id} ELIMINADA EXITOSAMENTE!");
             }
             else
             {
-                Console.WriteLine("Índice fuera de rango");
+                Console.WriteLine("\n--------------------------------");
+                Console.WriteLine("\nLA CUENTA QUE INGRESO NO EXISTE!");
             }
         }
 
-        public decimal ObtenerSaldo(int indice)
+        public decimal ObtenerSaldo(int id)
         {
-            if (indice >= 0 && indice < cuentas.Count)
+            if (id >= 0 && id < cuentas.Count)
             {
-                return decimal.Parse(cuentas[indice][6]); // Convertir la cadena de saldo a decimal
+                return decimal.Parse(cuentas[id][6]); // Convertir la cadena de saldo a decimal
             }
             else
             {
-                throw new ArgumentOutOfRangeException("El índice está fuera de rango");
+                Console.WriteLine("\n--------------------------------");
+                throw new ArgumentOutOfRangeException("\nLA CUENTA QUE INGRESO NO EXISTE!");
             }
         }
 
@@ -111,7 +113,8 @@ namespace Proyecto_2
             }
             else
             {
-                throw new ArgumentOutOfRangeException("El índice está fuera de rango");
+                Console.WriteLine("\n--------------------------------");
+                throw new ArgumentOutOfRangeException("\nLA CUENTA QUE INGRESO NO EXISTE!");
             }
         }
     }

@@ -82,7 +82,9 @@ class Program
 
                 default:
                     {
-                        Console.WriteLine("Opcion invalida porfavor intentelo de nuevo");
+                        Console.WriteLine("\n----------------------------------------");
+                        Console.WriteLine("\nLA OPCION QUE USTED REALIZO ES INVALIDA!");
+
                         break;
                     }
             }
@@ -94,7 +96,7 @@ class Program
         System.Console.WriteLine("");
         Console.WriteLine("\n*------------PAGO DE SERVICIOS------------*");
         System.Console.WriteLine("Ingrese el servicio a pagar");
-        System.Console.WriteLine("\n1.Agua\n2. Luz\n3. Telefono");
+        System.Console.WriteLine("\n1. Agua\n2. Luz\n3. Telefono");
         char opcion = Console.ReadKey().KeyChar;
 
         switch (opcion)
@@ -106,24 +108,27 @@ class Program
                     System.Console.WriteLine("\nIngrese monto a pagar");
                     decimal monto = decimal.Parse(Console.ReadLine());
                     decimal saldo = cuenta.ObtenerSaldo(0);
+
                     if (saldo > monto)
                     {
                         saldo = saldo - monto;
                         cuenta.ActualizarSaldo(0, saldo.ToString("N2"));
-                        
+
                         transaccion.IngresoDatos(DateTime.Now, monto.ToString("N2"), "Debito");
 
-                        System.Console.WriteLine("Servicio pagado!");
+                        System.Console.WriteLine("\nServicio pagado!");
                     }
                     else
                     {
-                        System.Console.WriteLine("Saldo Insuficiente!");
+                        System.Console.WriteLine("\nSALDO INSUFICIENTE!");
                     }
                     break;
                 }
             default:
                 {
-                    Console.WriteLine("\nLa opcion que usted realizo no es valida");
+                    Console.WriteLine("\n----------------------------------------");
+                    Console.WriteLine("\nLA OPCION QUE USTED REALIZO ES INVALIDA!");
+
                     break;
                 }
         }
@@ -155,16 +160,17 @@ class Program
 
                 transaccion.IngresoDatos(DateTime.Now, monto.ToString("N2"), "Debito");
 
-                System.Console.WriteLine("Transferencia Exitosa!");
+                System.Console.WriteLine("TRANSFERENCIA EXITOSA!");
             }
             else
             {
-                System.Console.WriteLine("Solo se puede transferir en un rango de Q200 a Q2,000");
+                System.Console.WriteLine("\nSolo se puede transferir en un rango de Q200 a Q2,000");
             }
         }
         else
         {
-            System.Console.WriteLine("La cuenta que ingreso no existe!");
+            System.Console.WriteLine("\n--------------------------------");
+            System.Console.WriteLine("LA CUENTA QUE INGRESO NO EXISTE!");
         }
     }
 
@@ -202,7 +208,8 @@ class Program
                     }
                 default:
                     {
-                        Console.WriteLine("\nLa opcion que usted realizo no es valida");
+                        Console.WriteLine("\n----------------------------------------");
+                        Console.WriteLine("\nLA OPCION QUE USTED REALIZO ES INVALIDA!");
                         break;
                     }
             }
@@ -212,7 +219,7 @@ class Program
     private static void EliminarCuenta()
     {
         System.Console.WriteLine("");
-        Console.WriteLine("\n*------------EDITAR CUENTA------------*");
+        Console.WriteLine("\n*------------ELIMINAR CUENTA------------*");
         System.Console.WriteLine("Porfavor ingresa el id de la cuenta a editar");
         int id = Int32.Parse(Console.ReadLine());
         cuenta.EliminarCuenta(id);
@@ -226,7 +233,7 @@ class Program
         int id = Int32.Parse(Console.ReadLine());
 
         int cuentaBuscada = cuenta.BuscarCuenta(id);
-        System.Console.WriteLine($"\n{cuentaBuscada}");
+
 
         if (cuentaBuscada == 1)
         {
@@ -259,7 +266,8 @@ class Program
         }
         else
         {
-            System.Console.WriteLine("La cuenta que ingreso no existe!");
+            Console.WriteLine("\n--------------------------------");
+            System.Console.WriteLine("LA CUENTA QUE INGRESO NO EXISTE!");
         }
     }
 
@@ -309,7 +317,7 @@ class Program
                 {
                     //Si no se cumplen los criterios de la accion que quiere realizar el usuario se muestran mensajes
                     Console.WriteLine("\n-----------------------------------------");
-                    Console.WriteLine("La opcion que usted realizo no es valida");
+                    Console.WriteLine("LA OPCION QUE USTED REALIZO ES INVALIDA!");
                     break;
                 }
         }
@@ -347,8 +355,7 @@ class Program
 
                             cuenta.ActualizarSaldo(0, nuevoSaldo.ToString("N2"));
                             transaccion.IngresoDatos(DateTime.Now, monto.ToString("N2"), "Credito");
-                            Console.WriteLine("");
-                            Console.WriteLine($"Su saldo actual es de Q{nuevoSaldo}");
+                            Console.WriteLine($"\nSu saldo actual es de Q{nuevoSaldo}");
                             i++;
 
 
@@ -358,7 +365,6 @@ class Program
 
                             //Si no se cumplen los criterios del saldo se muestran mensajes
                             Console.WriteLine("\nNo puede realizar esta accion debido a que su saldo es menor a Q500");
-                            Console.WriteLine("\nPresiona Enter para continuar.");
 
                         }
                         break;
@@ -372,8 +378,8 @@ class Program
                 default:
                     {
                         //Si no se cumplen los criterios de la accion que quiere realizar el usuario se muestran mensajes
-                        Console.WriteLine("\nLa opcion que usted realizo no es valida");
-                        Console.WriteLine("\nPresiona Enter para continuar.");
+                        Console.WriteLine("\n----------------------------------------");
+                        Console.WriteLine("LA OPCION QUE USTED REALIZO ES INVALIDA!");
                         break;
                     }
             }
@@ -487,7 +493,7 @@ class Program
             }
             else
             {
-                System.Console.WriteLine("\nDPI invalido, intentelo de nuevo!");
+                System.Console.WriteLine("\nDPI INVALIDO, INTENTELO DE NUEVO!");
                 i = 1;
             }
         }
@@ -516,7 +522,8 @@ class Program
         }
         else
         {
-            System.Console.WriteLine("Opcion Inalida!. Porfavor intentelo de nuevo");
+            Console.WriteLine("\n-----------------------------------------");
+            Console.WriteLine("\nLA OPCION QUE USTED REALIZO ES INVALIDA!");
             cuenta = "0";
         }
         return cuenta;
